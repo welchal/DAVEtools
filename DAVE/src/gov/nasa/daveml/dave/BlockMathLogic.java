@@ -29,7 +29,7 @@ import java.util.Iterator;
  *
  **/
 
-public abstract class BlockMathLogic extends BlockMath
+public class BlockMathLogic extends BlockMath
 {
     /**
      * Defined supported functions, for speed of execution
