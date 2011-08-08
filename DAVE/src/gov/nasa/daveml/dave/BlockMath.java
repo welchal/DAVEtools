@@ -155,6 +155,11 @@ abstract public class BlockMath extends Block
 		}
 	if( theType.equals("csymbol") )
 	    return new BlockMathFunctionExtension( applyElement, m);
+        if (theType.equals("not") ||
+            theType.equals("and") ||
+            theType.equals("or" ) ||
+            theType.equals("xor"))
+            return new BlockMathLogic( applyElement, m);
 
 	System.err.println("DAVE's BlockMath factory() method doesn't recognize \""
                 + theType + "\" math element encountered during parsing, sorry...");
