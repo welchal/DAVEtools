@@ -161,9 +161,10 @@ public class BlockMathProduct extends BlockMath
 	    this.value = 1.0;
 	    for(int i = 0; i<inputVals.length; i++)
 		this.value *= inputVals[i];
-	} else {
+	} else if ( this.blockType.equals("divide")){
 	    this.value = inputVals[0]/inputVals[1];
-	}
+	} else
+            this.value = inputVals[0]%inputVals[1];
 
 	// record current cycle counter
 	resultsCycleCount = ourModel.getCycleCounter();

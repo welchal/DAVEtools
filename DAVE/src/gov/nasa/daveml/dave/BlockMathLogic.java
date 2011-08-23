@@ -90,7 +90,7 @@ public class BlockMathLogic extends BlockMath
         }
     }
 
-    private void setFunction(String functionType) throws DAVEException {
+    public void setFunction(String functionType) throws DAVEException {
     	this.funcType = functionType;
         this.setName( funcType + "_" + this.ourModel.getNumBlocks() );
         
